@@ -1,5 +1,5 @@
 function sum() {
-  var args = arguments.slice();
+  var args = Array.prototype.slice.call(arguments, 1);
   var sum = 0;
   args.forEach((num) => {
     sum += num;
@@ -7,4 +7,4 @@ function sum() {
   return sum;
 }
 
-module.exports = {sum};
+module.exports = sum;
