@@ -5,38 +5,22 @@ const expect = require('chai').expect;
 //have files required from src here
 
 // define(['../src/jsreview.js'])
-const sum = require('../src/jsreview.js')
+const array = require('../src/arrays.js')
 //have before hooks (if needed) here
 
-
-describe('sum', () => {
-  // var sum;
-  console.log('what are you ', sum);
+describe('Array', () => {
+  it('should be an array', () => {
+    expect(Array.isArray(array.arr)).to.equal(true);
+  })
+  it('should have length of 5', () => {
+    expect(array.arr.length).to.equal(5);
+  })
   it('should exist', () => {
-    expect(typeof sum).to.equal('function');
+    expect(typeof array.findOddNums).to.equal('function');
+  })
+  it('should return array of odd numbers', () => {
+    var newArr = [1,[2],{a: 15},4,"5",6,7,]
+    expect(array.findOddNums(newArr)).to.deep.equal([1,7])
   })
 })
 
-
-// //array practice
-// describe('Array', () => {
-//   describe('Fun with Arrays', () => {
-//     it('should exist', () => {
-//       var arr = {};
-//       assert.isArray(arr, 'is array');
-//     })
-//     it('should return -1 when the value is no present', () => {
-//       assert.equal([1,2,3].indexOf(4), -1);
-//     })
-//   })
-// })
-
-// //object practice
-// describe('Objects', () => {
-
-// });
-
-// //function practice
-// describe('Functions', () => {
-
-// });
