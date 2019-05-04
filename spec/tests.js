@@ -6,7 +6,7 @@ const expect = require('chai').expect;
 // define(['../src/jsreview.js'])
 // const array = require('../src/arrays.js');
 // const {arr, first, last, findOddNums, findSum} = require('../src/arrays.js');
-const {cat, } = require('../src/objects.js');
+const {cat, addKeyValues, returnString} = require('../src/objects.js');
 const func = require('../src/functions.js');
 //have before hooks (if needed) here
 
@@ -92,7 +92,7 @@ describe('Objects', () => {
       expect(cat.name).to.exist;
     })
 
-    it('should be a string value', () => {
+    it('"name" should be a string value', () => {
       expect(typeof cat.name).to.equal('string');
     })
 
@@ -104,32 +104,33 @@ describe('Objects', () => {
   describe('adding array values into object function', () => {
 
     it('should exist', () => {
-      expect().to.exist;
+      expect(addKeyValues).to.exist;
     })
 
     it('should be a function', () => {
-      expect(typeof ).to.equal('function');
+      expect(typeof addKeyValues).to.equal('function');
     })
 
     it('return an object with keys as indexes and values as array elements', () => {
       let testArr = ['hello', 'world', 'how', 'are', 'you'];
+      let result = {0: 'hello', 1: 'world', 2: 'how', 3: 'are', 4: 'you'};
 
-      expect().to.equal({0: 'hello', 1: 'world', 2: 'how', 3: 'are', 4: 'you'});
+      expect(addKeyValues(testArr)).to.deep.equal(result);
     })
   })
 
   describe('return string function', () => {
 
     it('should exist', () => {
-      expect().to.exist;
+      expect(returnString).to.exist;
     })
 
     it('should be a function', () => {
-      expect(typeof ).to.equal('function');
+      expect(typeof returnString).to.equal('function');
     })
 
     it('should return a string', () => {
-      var result;
+      var result = returnString();
       expect(typeof result).to.equal('string');
     })
 
@@ -142,7 +143,7 @@ describe('Objects', () => {
         e: "good"
       }
 
-      expect().to.equal("hello world what is good");
+      expect(returnString(obj)).to.deep.equal("hello world what is good");
     })
   })
 })
