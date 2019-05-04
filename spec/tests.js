@@ -111,7 +111,11 @@ describe('Objects', () => {
       expect(typeof ).to.equal('function');
     })
 
-    it('return an object with keys as indexes and values as array ')
+    it('return an object with keys as indexes and values as array elements', () => {
+      let testArr = ['hello', 'world', 'how', 'are', 'you'];
+
+      expect().to.equal({0: 'hello', 1: 'world', 2: 'how', 3: 'are', 4: 'you'});
+    })
   })
 
   describe('return string function', () => {
@@ -129,7 +133,7 @@ describe('Objects', () => {
       expect(typeof result).to.equal('string');
     })
 
-    it('should return concated string from values of object', () => {
+    it('should return concatenated string from values of object', () => {
       let obj = {
         a: "hello",
         b: "world",
