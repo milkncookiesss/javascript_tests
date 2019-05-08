@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-arr": "mocha spec/arrtest.js",
-    "test-obj": "mocha spec/objtest.js"
+    "test-arr": "mocha --bail --reporter nyan spec/arrtest.js",
+    "test-obj": "mocha spec/objtest.js",
+    "test-func": "mocha spec/functest.js",
+    "test-ajax": "mocha spec/ajaxtest.js"
   },
   "repository": {
     "type": "git",
