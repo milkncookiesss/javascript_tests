@@ -10,9 +10,12 @@
 
 //create a function called "last" that returns the last element of an array
 
-//create a function called "findOddNums" that accepts a parameter that is an array and returns a new array of all the odd numbers from the given array
-
 //create a function called "findSum" that takes in an array and returns the sum of all the elements
+
+//create a function called "findOddNums" that accepts a parameter that is an array and returns a new array of all the odd numbers from the given array if there are no odd numbers return an empty array
+
+//without using JavaScript's premade array includes method, create a function called "includesInArr" that takes in an array and a target and returns a boolean if the target is in the array.
+
 
 
 
@@ -52,5 +55,6 @@ module.exports = {
   first: first,
   last: last,
   findOddNums: findOddNums,
-  findSum: findSum
+  findSum: findSum,
+  includesInArr: includesInArr
   };
