@@ -6,8 +6,7 @@
   "scripts": {
     "test-arr": "mocha --bail --reporter nyan spec/arrtest.js",
     "test-obj": "mocha spec/objtest.js",
-    "test-func": "mocha spec/functest.js",
-    "test-ajax": "mocha spec/ajaxtest.js"
+    "test-func": "mocha spec/functest.js"
   },
   "repository": {
     "type": "git",

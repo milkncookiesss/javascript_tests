@@ -12,7 +12,7 @@
 
 //create a function called "findSum" that takes in an array and returns the sum of all the elements
 
-//create a function called "findOddNums" that accepts a parameter that is an array and returns a new array of all the odd numbers from the given array if there are no odd numbers return an empty array
+//create a function called "findOddNums" that accepts an argument that is an array and returns a new array of all the odd numbers from the given array if there are no odd numbers return an empty array
 
 //without using JavaScript's premade array includes method, create a function called "includesInArr" that takes in an array and a target and returns a boolean if the target is in the array.
 

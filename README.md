@@ -15,9 +15,9 @@ npm install
 3. Run tests using terminal
   test-arr runs tests for arrays.js
   test-obj runs tests for objects.js
+  test-func runs tests for functions.js
 
 example:
 ```bash
 npm run test-arr
 ```
- 

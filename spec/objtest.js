@@ -3,7 +3,7 @@ const should = require('chai').should;
 const expect = require('chai').expect;
 
 //require variables and functions
-const {cat, addKeyValues, returnString} = require('../src/objects.js');
+const {cat, addKeyValues, returnString, listKeyValues} = require('../src/objects.js');
 
 
 
@@ -25,6 +25,7 @@ describe('Objects', () => {
     })
 
     it('should have more than one key', () => {
+      
       expect(Object.keys(cat).length).to.be.above(1);
     })
   })
@@ -47,19 +48,45 @@ describe('Objects', () => {
     })
   })
 
-  describe('return string function', () => {
+  describe('returns array of tuples that are objs key/value pair', () => {
 
-    it('should exist', () => {
-      expect(returnString).to.exist;
+    it('should be a function', () => {
+      expect(typeof listKeyValues).to.equal('function');
     })
+
+    it('should return an empty array if the object is empty', () => {
+      let obj = {};
+
+      expect(listKeyValues(obj)).to.equal([]);
+    })
+    
+    it('should return an array of arrays containing obj key/value pairs', () => {
+      let obj = {
+        a: 'hello',
+        b: 'this',
+        c: 'is the stuff',
+        d: 123,
+        e: 90
+      }
+
+      expect(listKeyValues(obj)).to.equal([['a', 'hello'], ['b', 'this'], ['c', 'is the stuff'], ['d', 123], ['e', 90]])
+    })
+  })
+
+  describe('return string function', () => {
 
     it('should be a function', () => {
       expect(typeof returnString).to.equal('function');
     })
 
     it('should return a string', () => {
-      var result = returnString();
+      let result = returnString();
       expect(typeof result).to.equal('string');
+    })
+
+    it('should return an empty string if object is empty', () => {
+      let obj = {};
+      expect(returnString(obj)).to.equal('');
     })
 
     it('should return concatenated string from values of object', () => {
