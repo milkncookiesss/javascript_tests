@@ -2,7 +2,8 @@ const assert = require('chai').assert;
 const should = require('chai').should;
 const expect = require('chai').expect;
 
-const {sum, mult, replaceLetters} = require('../src/functions.js')
+const {sum, mult, replaceLetters} = require('../src/functions.js');
+
 describe('functional programming', () => {
 
   describe('sum function', () => {

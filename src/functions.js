@@ -45,7 +45,6 @@
 
 
 
-
 module.exports = {
   sum: sum,
   mult: mult,
