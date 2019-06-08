@@ -14,7 +14,7 @@ describe('Array', () => {
   })
   
   it('should have length of 6', () => {
-    expect(arr.length).to.equal(6);
+    expect(arr.length).to.equal(5);
   })
   
   it('should contain a string', () => {
@@ -81,7 +81,9 @@ describe('Array', () => {
       })
 
       it('should return a boolean', () => {
-        let bool = includesInArr();
+        var arry = ['ryan', 'taylor', 'chris', 'peter'];
+        var target = 'chris';
+        let bool = includesInArr(arry, target);
         expect(typeof bool).to.equal('boolean');
       })
       

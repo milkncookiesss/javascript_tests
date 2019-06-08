@@ -18,8 +18,8 @@
 //create a function called listKeyValues that takes in an object and returns an array of arrays where the nested array's first index is the object's property and the second index is the object's key value if the object is empty return an empty array
 
 
-//create a function called returnString that takes in an object and returns a string of the concatenated values seperated by spaces
 
+//create a function called returnString that takes in an object and returns a string of the concatenated values seperated by spaces
 
 
 

@@ -57,7 +57,7 @@ describe('Objects', () => {
     it('should return an empty array if the object is empty', () => {
       let obj = {};
 
-      expect(listKeyValues(obj)).to.equal([]);
+      expect(listKeyValues(obj)).to.deep.equal([]);
     })
     
     it('should return an array of arrays containing obj key/value pairs', () => {
@@ -69,7 +69,7 @@ describe('Objects', () => {
         e: 90
       }
 
-      expect(listKeyValues(obj)).to.equal([['a', 'hello'], ['b', 'this'], ['c', 'is the stuff'], ['d', 123], ['e', 90]])
+      expect(listKeyValues(obj)).to.deep.equal([['a', 'hello'], ['b', 'this'], ['c', 'is the stuff'], ['d', 123], ['e', 90]])
     })
   })
 
